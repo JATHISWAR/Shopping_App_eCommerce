@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_relav"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeActivity"
+    tools:showIn="@layout/app_bar_home">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/relav_search"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:background="#d55aa9"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="40dp"
+            android:layout_centerVertical="true"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_search_24" />
+        <EditText
+            android:id="@+id/search_product"
+            android:layout_toRightOf="@+id/search"
+            android:layout_width="280dp"
+            android:hint="Search"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:textAllCaps="false"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/search_product"
+            android:background="@color/white"
+            android:fontFamily="@font/catamaran_medium"
+            android:text="Search" />
+
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_menu"
+        android:layout_below="@id/relav_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
